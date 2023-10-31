@@ -1,0 +1,60 @@
+package labpractical01; //Read Stream
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+
+public class ReadStream {
+    
+    public static void main(String[] args) {      
+        try {
+            BufferedInputStream reader =  
+                    new BufferedInputStream(new FileInputStream("C:\\Users\\precticals\\01.txt"));
+            
+            byte[] chunk = new byte[5];
+            int readBytes;
+            int remainingBytes = reader.available();
+            
+            while((readBytes = reader.read(chunk))>0){
+                System.out.println(new String (chunk,0,readBytes));
+                remainingBytes = remainingBytes - readBytes;
+                System.out.println("Remaining Bytes : " + remainingBytes);
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }    
+}
+
+
+
+//Write Stream
+
+package labpractical01;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+
+public class WriteStream {
+    
+    public static void main(String[] args) {
+        try {
+            OutputStream file = new FileOutputStream("C:\\Users\\precticals\\01.txt");
+            
+            Writer outputwriter = new OutputStreamWriter(file);
+            
+            outputwriter.write("Hii. My Name is Yasitha Madushan.");
+            
+            System.out.println("Writing is completed");
+            
+            outputwriter.close();
+        
+        }catch (IOException e) {
+           e.getStackTrace();
+        }
+    }
+    
+}
