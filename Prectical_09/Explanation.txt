@@ -1,0 +1,31 @@
+BroadcastReceiver and BroadcastSender (Broadcast Communication using UDP):
+
+In the BroadcastReceiver class, the program listens for a broadcast message on a specific port (12345). 
+It creates a DatagramSocket to receive the broadcasted message and prints the received message to the 
+console. On the sender side, the BroadcastSender class creates a DatagramSocket and sends a broadcast 
+message to all devices on the network using the broadcast IP address (255.255.255.255) and the same port 
+(12345). Both classes demonstrate broadcasting where a message is sent from one sender to multiple 
+receivers within the same network.
+
+MulticastReceiver and MulticastSender (Multicast Communication using UDP):
+
+The MulticastReceiver class listens for multicast messages sent to a specific multicast group address (224.0.0.1) 
+and port number (12345). It joins the multicast group, receives a message using a MulticastSocket, and prints the
+received message to the console. The MulticastSender class sends a multicast message to the same multicast group 
+address and port using a MulticastSocket. Both classes demonstrate multicast communication, where a message is 
+sent from one sender to multiple receivers who have joined the specific multicast group.
+
+UnicastReceiver and UnicastSender (Unicast Communication using TCP):
+
+In the UnicastReceiver class, the program creates a ServerSocket and listens for incoming connections on port 12345. 
+When a connection is established, it reads a message sent by the UnicastSender. The UnicastSender class creates a 
+Socket and connects to the receiver's IP address (localhost in this case) and port number 12345. It sends a message 
+("Gotcha ...") to the receiver using an OutputStream and a PrintWriter. Both classes demonstrate unicast communication, 
+where messages are sent between a specific sender and receiver using TCP sockets.
+
+BroadcastReceiver and BroadcastSender showcase broadcasting messages to multiple devices within the same network using UDP. 
+The MulticastReceiver and MulticastSender demonstrate multicast communication, where messages are 
+sent to multiple devices that have joined a specific multicast group address. Lastly, the UnicastReceiver and UnicastSender
+exemplify unicast communication, where messages are exchanged between a specific sender and receiver using TCP sockets, 
+ensuring direct communication between two networked entities.
+

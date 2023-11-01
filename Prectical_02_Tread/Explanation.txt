@@ -1,0 +1,26 @@
+Task01: Extending Thread Class
+
+In the first code snippet, a class named Task01 is declared as a subclass of the Thread class. 
+It overrides the run() method to define the behavior of the thread. 
+Inside the run() method, it prints "My first thread application." 
+In the main() method, an object of Task01 is created, and the start() method is called on this object. 
+This starts the execution of the thread, causing it to print the specified message. 
+This approach directly extends the Thread class to create a custom thread class.
+
+Task02: Implementing Runnable Interface
+
+In the second code snippet, a class named Task02 implements the Runnable interface. 
+It defines the run() method, which prints "My second thread application." 
+In the main() method, a Thread object is created by passing an instance of Task02 as a parameter. 
+This demonstrates the use of the Runnable interface to create threads. 
+By passing Task02 to the Thread constructor, it separates the thread's behavior from the thread itself, allowing for better code organization and reuse.
+
+ Task03:Thread with Argument Processing
+
+ In the third code snippet, a class named Task03 extends the Thread class. 
+ It contains logic to process command line arguments. 
+ If the provided argument is a non-negative integer, it creates an instance of the Summation class, passing the argument value and a Sum object. 
+ The Summation class implements Runnable and calculates the sum of numbers from 0 to the specified upper limit. 
+ The join() method is used to ensure that the main thread waits for the Summation thread to complete its task before printing the result. 
+ The Sum class encapsulates the sum value and provides methods to get and set the sum. 
+ The code demonstrates multithreading with argument processing and synchronization to ensure correct calculation of the sum.

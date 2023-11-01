@@ -1,0 +1,23 @@
+GetSummation: Calculating Summation Using Multiple Threads
+
+In the GetSummation class, the program first prompts the user to enter a non-negative integer. 
+It then calculates the midpoint of this number and creates three SummationThread objects. 
+Each thread is responsible for calculating the summation of a specific portion of numbers. 
+The program divides the range of numbers into three equal parts and assigns each part to a separate thread. 
+Each thread is then started, and the getValue method of 
+each thread is called to provide the start, end, and thread number for computation. 
+After starting the threads, the main thread waits for all three threads to finish using the join() method. 
+Once all threads have completed their computations, their results are added together, and the final 
+summation is displayed to the user. This approach utilizes multithreading to calculate the summation
+of a large set of numbers efficiently.
+
+SummationThread: Thread for Calculating Summation
+
+In the SummationThread class, each instance of this class represents a thread responsible for calculating 
+the summation of a specific range of numbers. The getValue method is used to set the start, end, and thread 
+number for the computation. When the thread is started, it calculates the summation of numbers from the 
+specified start to end value. During each iteration, there is a pause of 500 milliseconds (Thread.sleep(500)) 
+to simulate some processing time for demonstration purposes. After completing the summation, the result is 
+stored in the result variable. Each thread prints its thread number and the calculated summation to the console.
+This class demonstrates the use of threads to perform parallel summation calculations for different portions 
+of the input range.

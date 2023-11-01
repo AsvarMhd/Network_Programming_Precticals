@@ -1,0 +1,26 @@
+BlockingIO: Using FileInputStream and FileOutputStream
+
+In the BlockingIO class, the program performs file copy using blocking I/O operations. 
+It reads the content of the source file (Old.txt) using a FileInputStream and writes the
+ content to the destination file (New01.txt) using a FileOutputStream. The program uses 
+ a byte buffer (buffer) to read and write data in chunks, improving the efficiency of the 
+ I/O operations. It iteratively reads data from the input stream into the buffer and writes 
+ the buffer's content to the output stream. This process continues until there is no more 
+ data to read (read() returns -1). Finally, the input and output streams are closed, and the 
+ total time taken for the file copy operation is calculated and printed. This approach uses 
+ blocking I/O operations, meaning the program will wait until the read or write operations 
+ are completed before proceeding to the next step.
+
+ NonBlockingIO: Using FileChannel and ByteBuffer
+
+ In the NonBlockingIO class, the program demonstrates file copy using non-blocking I/O operations 
+ with FileChannel and ByteBuffer. It uses the FileChannel class, which provides a more flexible 
+ and efficient way to perform file I/O operations in non-blocking mode. The program reads data from 
+ the source file (Old.txt) into a ByteBuffer and writes the content of the ByteBuffer to the destination 
+ file (New02.txt) using a FileChannel. The flip() method is used to prepare the ByteBuffer for reading, 
+ and clear() is used to clear the buffer after writing the data. This approach allows for asynchronous, 
+ non-blocking file I/O operations, improving the performance and responsiveness of the program, especially 
+ when dealing with large files. The time taken for the file copy operation is measured, and the duration 
+ is printed to the console.
+
+ 

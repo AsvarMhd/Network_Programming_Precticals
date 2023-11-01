@@ -1,0 +1,19 @@
+The first two codes are (Clint.java, ClientHandler.java) part of a simple client-server communication system using sockets in Java. 
+In the Client class, a client connects to a server (assuming the server is running on localhost at 
+port 8000) and reads a message sent by the server. It establishes a socket connection, reads the 
+server's response using input streams, and prints the response to the console. The ClientHandler 
+class implements the Runnable interface and defines the behavior for handling client connections 
+on the server side. When a client connects, the server creates a ClientHandler object in a separate thread. 
+The ClientHandler class sends a message to the connected client and then closes the connection. 
+This approach allows the server to handle multiple clients concurrently, with each client being processed 
+in its own thread.
+
+In the Server class, a server socket is created and set to listen on port 8000. 
+When a client connects, the server accepts the connection and starts a ClientHandler 
+thread for that client. Additionally, the ServerHandler class implements the Runnable interface and defines 
+a simple message that the server prints when the server thread is run. However, in the provided code, 
+the ServerHandler class is not utilized or integrated into the server logic. The Server class demonstrates 
+the server's ability to handle multiple client connections by spawning individual threads for each client, 
+allowing concurrent communication with multiple clients. The Client and ClientHandler together establish 
+client-server communication, and the Server class orchestrates and manages these connections efficiently 
+using multithreading.

@@ -1,0 +1,25 @@
+ClientDemo: Client-side Socket Communication
+
+In the first code snippet, ClientDemo represents a simple client-side socket communication. 
+The client attempts to connect to a server running on the localhost (127.0.0.1) at port 8080. 
+It does this by creating a Socket object with the specified server address and port number.
+Once connected, it sets up an input stream to read data from the server. 
+In this case, it reads a single line of text from the server using a BufferedReader. 
+The client then prints the server's response to the console. 
+If any IOException occurs during the process, it is caught and its stack trace is printed. 
+The client demonstrates the basic steps involved in establishing a socket connection, reading data 
+from the server, and handling potential errors during communication.
+
+Server: Multi-threaded Server Handling Multiple Clients
+
+In the second code snippet, Server represents a multi-threaded server application. 
+It listens for incoming client connections on port 8080. 
+When a client connects, the server accepts the connection, prints a message indicating the new client's 
+IP address, and creates a new ClientHandler thread to handle the communication with the client. 
+The ClientHandler class implements the Runnable interface, allowing each client connection to be 
+handled in a separate thread. Within the ClientHandler's run() method, it sends a greeting 
+message to the connected client using a PrintWriter. If any IOException occurs during the 
+communication process, it is caught, and the corresponding stack trace is printed. After the 
+communication is done, the client socket is closed. This server implementation demonstrates 
+how to handle multiple client connections concurrently using threads, allowing for efficient 
+handling of client requests without blocking the server's main thread.

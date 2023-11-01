@@ -1,0 +1,16 @@
+PacketClientProgram: UDP Client
+
+In the PacketClientProgram class, a client sends a message to the server. It first creates a DatagramSocket 
+and uses it to send a message to the server. The client takes the user's input as the message (in this 
+case, a username). It creates a DatagramPacket containing the message and sends it to the server's IP 
+address and port number. After sending the packet, the client waits to receive a response from the server. 
+Upon receiving the response, it prints the server's message to the console. The client program demonstrates 
+how to create a UDP socket, send a packet, and receive a response from the server.
+
+PacketServer: UDP Server
+
+In the PacketServer class, a server listens for incoming client requests using a DatagramSocket. The server 
+is implemented to be always running and waiting for incoming packets. When a packet is received, it extracts 
+the data from the packet, processes it (in this case, extracts the username from the client's message), and 
+sends a response back to the client. The server demonstrates how to set up a UDP server, listen for client 
+packets, process client requests, and send responses back to the client.

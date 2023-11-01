@@ -1,0 +1,40 @@
+URIManipulationExample: URI Manipulation
+
+In the first code snippet, URIManipulationExample, the program demonstrates 
+how to work with URI (Uniform Resource Identifier) in Java. 
+It starts by creating a URI object from a given URI string. 
+It then modifies the URI by resolving a relative path against the base URI using the resolve() method. 
+The modified URI is printed to the console. Next, 
+it creates a new URI using various components like scheme, host, path, query, and fragment. 
+The new URI is created and printed. 
+This example illustrates basic URI manipulation, including resolution of relative URIs and 
+creation of new URIs with specific components.
+
+URIPassingExample: URI Component Extraction
+
+In the second code snippet, URIPassingExample, the program demonstrates how to extract different components from a URI. 
+It creates a URI object from a given URI string and then prints 
+out specific components such as scheme, host, path, query, and fragment using the corresponding get 
+methods provided by the URI class. 
+This example shows how to retrieve individual components from a URI for further processing or analysis.
+
+URLConnectionReader: Reading Web Content Using URLConnection
+
+In the third code snippet, URLConnectionReader, the program demonstrates 
+how to read web content from a URL using URLConnection. 
+It creates a URL object representing a webpage and opens a connection to that URL using openConnection(). 
+It then reads the content of the webpage using a BufferedReader after obtaining an InputStream from the URLConnection. 
+The program prints each line of the webpage to the console. 
+This example showcases how to establish a connection to a webpage, obtain an input stream, and read its content
+line by line.
+
+URLReaderProgram: Reading Web Content Using URL
+
+In the fourth code snippet, URLReaderProgram, the program also reads web content, but in this case, 
+it directly uses the openStream() method of the URL class to obtain an InputStream. 
+It then creates an InputStreamReader and a BufferedReader to read the content line by line. 
+The program demonstrates an alternative way to read web content using a simpler approach, 
+directly retrieving the input stream from the URL object. It prints the lines of the webpage to the console. 
+This example illustrates a straightforward method to read web content without using URLConnection.
+
+
