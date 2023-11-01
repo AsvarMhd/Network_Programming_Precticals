@@ -1,0 +1,9 @@
+The first code snippet, ReadStream, reads data from a file named "01.txt" using a BufferedInputStream.
+It reads the file in chunks of 5 bytes at a time and prints the content of each chunk as a string. 
+It also calculates and displays the remaining bytes in the file as it reads through the content. 
+If there are more than 5 bytes in the file, it will read the next 5 bytes, and so on, until the entire file is read. 
+The second code snippet, WriteStream, writes a specific string ("Hii. My Name is AswarMhd.") 
+to the same file, "01.txt", using a FileOutputStream and an OutputStreamWriter. 
+It first creates an output stream to the file and then writes the specified string to the file. 
+After writing the content, it closes the output stream. 
+In summary, ReadStream is for reading data from a file, and WriteStream is for writing specific content to the same file.
